@@ -6,7 +6,7 @@
 % Author: Richard Somervail, Istituto Italiano di Tecnologia, 2023
 %           www.iannettilab.net
 %%  
-function vers = eegplugin_dusk2dawn(fig,try_strings,catch_strings)
+function vers = eegplugin_letswave4eeglab(fig,try_strings,catch_strings)
 
 vers = '1.0.0';
 p = fileparts(which('eegplugin_letswave4eeglab'));
