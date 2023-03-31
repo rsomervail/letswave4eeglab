@@ -18,7 +18,7 @@ GLW_my_view_OpeningFcn;
         handles=S.handles;
         clear S;
         for k = 1:length(inputfiles)
-            datasets_data(k).data     = inputfiles(k).data; % RS edit
+            datasets_data(k).data     = double(inputfiles(k).data); % RS edit
             datasets_header(k).header = inputfiles(k).header; % RS edit
 %             [p, n, e]=fileparts(fullfile(inputfiles.file_path,inputfiles.file_str{k})); % orig lines
             userdata.datasets_path = inputfiles(k).header.source; 
