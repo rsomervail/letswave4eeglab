@@ -27,7 +27,11 @@ for f = 1:length(EEG)
     end
     lwdata(f).header.tags='';
     lwdata(f).header.datasize=[EEG(f).trials EEG(f).nbchan 1 1 1 EEG(f).pnts];
-    lwdata(f).header.xstart=EEG(f).times(1);
+    if abs(mean(diff(EEG(f).times)) - 1/EEG(f).srate) > 1e-2 % indicates that units are in ms
+        lwdata(f).header.xstart=EEG(f).times(1) /1000;
+    else
+        lwdata(f).header.xstart=EEG(f).times(1);
+    end
     lwdata(f).header.ystart=0;
     lwdata(f).header.zstart=0;
     lwdata(f).header.xstep=1/EEG(f).srate;

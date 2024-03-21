@@ -8,7 +8,7 @@
 %%  
 function vers = eegplugin_letswave4eeglab(fig,try_strings,catch_strings)
 
-vers = '1.0.0';
+vers = '1.0.1';
 p = fileparts(which('eegplugin_letswave4eeglab'));
 
 % DEFINITIONS
